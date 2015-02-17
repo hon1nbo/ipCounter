@@ -67,6 +67,10 @@ unsigned long int countIPs(char* filePath) {
 		  cout << inbuf << ":  " << tempNumberIPs << endl;
           getline(ipList, inbuf);
         }
+		
+		unsigned long int tempNumberIPs = parseLine(inbuf);
+        numberIPs += tempNumberIPs;
+		cout << inbuf << ":  " << tempNumberIPs << endl;
 
         ipList.close();
       }
@@ -108,10 +112,9 @@ unsigned long int parseLine(string line) {
 				int number2 = atoi(temp2.c_str());
 				int difference = (number2 - number1);
 				
-				// account for the inclusion of 0
+				// account for the inclusion of smaller number
 				// ex) 192.168.1.0-192.168.1.255
 				if (difference != 0)
-					if (number1 == 0)
 						difference++;
 					
 				// 256 addresses in each octet, raise to power to do maths
