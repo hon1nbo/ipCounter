@@ -1,13 +1,3 @@
-/***************************************************************************************************************
-** IP Counter
-** Author: Jim Hartnett
-** Tool for counting the number of IPs in a given input.
-** Developed for quick assessment of sizes of networks in scope for testing and QA
-** takes a flat text file as input, with multiple range formats
-** Current Status: Working (needs improvement)
-	Basic functionality is stable for real use, but feature set is currently limited such as formatting support
-****************************************************************************************************************/
-
 **************
 #### Info ####
 **************
@@ -29,11 +19,13 @@ The tool works, but still needs improvement. However, since it gets the basic jo
 Count IPv4 addresses in multiple formats, including:
 
 Prefix format:
-*.*.*.*/XX
+Y.Y.Y.Y/XX
+
 range format:
-*.*.*.*-*.*.*.*
+X.X.X.X-Y.Y.Y.Y
+
 singles:
-*.*.*.*
+X.X.X.X
 
 *********************
 #### Limitations ####
