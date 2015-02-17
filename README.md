@@ -8,21 +8,6 @@
 	Basic functionality is stable for real use, but feature set is currently limited such as formatting support
 ****************************************************************************************************************/
 
-# Reading Tip: this readme is laid out for syntax highlighters
-# I use notepad++ with C++ highlighting enabled.
-
-/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\
- #Table of Contents:           *
-                               *
- * Info                        *
- * Supported Functions         *
- * Limitations                 *
- * System Requirements         *
- * Usage                       *
- * TODOs                       *
-/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\
-
-
 **************
 #### Info ####
 **************
