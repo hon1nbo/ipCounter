@@ -5,7 +5,7 @@
 * in a given range. Input is a txt formatted file similar 
 * to the sample provided
 * 
-* Author: Jim Hartnett
+* Author: Hon1nbo
 ***************************************************************************/
 
 #include <iostream>
