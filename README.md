@@ -1,58 +1,62 @@
-**************
-#### Info ####
-**************
+## Introduction
 
 IP addresses can be annoying to count by hand, especially for large networks with disconnected segments.
 I have scripted things in the past, but decided to make a tool for it to release.
 
-The tool was written in c++ simply because the last time I wrote it I needed to make it quickly,
-and I could bash out C based programs much faster than python etc.
-I will eventually rewrite this to C only, but I made use of the c++ string search functions in a hurry.
+The tool was originaly written in c++ simply because the last time I wrote it I needed to make it quickly, and I could bash out 
+C based programs much faster than python etc.
+I have since included a Python based version. The C++ version is here for posterity purposes.
 
-The tool works, but still needs improvement. However, since it gets the basic job done I decided to start release.
+The tool works, but still needs improvement. However, it gets the basics done.
 
 
-*****************************
-#### Supported Functions ####
-*****************************
+## Supported Formats
 
 Count IPv4 addresses in multiple formats, including:
 
-Prefix format:
+Prefix format (CIDR):
+```
 Y.Y.Y.Y/XX
+```
 
-range format:
+Range format:
+```
 X.X.X.X-Y.Y.Y.Y
+```
 
-singles:
+Singles:
+```
 X.X.X.X
+```
 
-*********************
-#### Limitations ####
-*********************
+## Limitations
 
 The tool currently has some limitations.
 - It only supports IPv4 at the moment (IPv6 coming, but given the nature of IPv6 allocations may not be as useful)
 - Tool assumes no white space at the moment (you shouldn't really have extra white space in your range formats anyway for machine input)
 - RegEx is currently not implemented (it was a quick and easy program, and there were issues with the GCC RegEx library last time I used it, so it's currently TODO)
 
-*****************************
-#### System Requirements ####
-*****************************
+## System Requirements
 
-None really, as long as you can compile a standard C/C++ program (there is a macro to call windows.h if on windows)
+None really. The Python version should work with anything after 2.5. As for the C++ version, as long as you can compile a 
+standard C/C++ program (there is a macro to call windows.h IFF on windows so it is cross platform)
 
-***************
-#### Usage ####
-***************
+## Usage
 
-ipCounter /path/to/ip/list
+ipCounter.py /path/to/ip/list
 
-***************
-#### TODOs ####
-***************
+## Sample Output
+The following is a sample output from the Python verison. The Windows/Linux native is similar.
+```
+10.0.15.2-10.1.26.4 :  134147
+192.168.1.0/24 :  256.0
+192.168.4.0/23 :  512.0
+127.0.0.1 : 1
+iterated through  4  entries
+Total IPs Counted:  134916.0
+```
 
-- implement IPv6 support
+## Future
+- Implement IPv6 support
 - implement white space support
 - implement RegEx
-- possibly rewrite in Python, but the program works and that is what matters. (though interpreted would be nice, but this was a quickie)
