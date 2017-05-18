@@ -1,3 +1,4 @@
+# IP Counter
 ## Introduction
 
 IP addresses can be annoying to count by hand, especially for large networks with disconnected segments.
