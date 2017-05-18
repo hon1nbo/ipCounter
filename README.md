@@ -33,8 +33,8 @@ X.X.X.X
 
 The tool currently has some limitations.
 - It only supports IPv4 at the moment (IPv6 coming, but given the nature of IPv6 allocations may not be as useful)
-- Tool assumes no white space at the moment (you shouldn't really have extra white space in your range formats anyway for machine input)
-- RegEx is currently not implemented (it was a quick and easy program, and there were issues with the GCC RegEx library last time I used it, so it's currently TODO)
+- Tool assumes no white space at the moment
+- RegEx is currently not implemented to provide even greater format support
 
 ## System Requirements
 
@@ -49,14 +49,14 @@ ipCounter.py /path/to/ip/list
 The following is a sample output from the Python verison. The Windows/Linux native is similar.
 ```
 10.0.15.2-10.1.26.4 :  134147
-192.168.1.0/24 :  256.0
-192.168.4.0/23 :  512.0
+192.168.1.0/24 :  256
+192.168.4.0/23 :  512
 127.0.0.1 : 1
 iterated through  4  entries
-Total IPs Counted:  134916.0
+Total IPs Counted:  134916
 ```
 
 ## Future
 - Implement IPv6 support
-- implement white space support
+- implement white space handling
 - implement RegEx
