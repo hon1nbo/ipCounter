@@ -58,6 +58,5 @@ Total IPs Counted:  134916
 ```
 
 ## Future
-- Implement IPv6 support
 - implement white space handling
 - implement RegEx
