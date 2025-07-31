@@ -33,9 +33,8 @@ X.X.X.X
 ## Limitations
 
 The tool currently has some limitations.
-- It only supports IPv4 at the moment (IPv6 coming, but given the nature of IPv6 allocations may not be as useful)
+- It only supports IPv4 at the moment (IPv6 is usually in large blocks rather than numerous, dis-jointed allocations so there is less need)
 - Tool assumes no white space at the moment
-- RegEx is currently not implemented to provide even greater format support
 
 ## System Requirements
 
@@ -57,6 +56,3 @@ iterated through  4  entries
 Total IPs Counted:  134916
 ```
 
-## Future
-- implement white space handling
-- implement RegEx
